@@ -2,3 +2,4 @@
 /airflow/logs/
 *.log
 .env
+Interview questions.docx
