@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    database: JOB_POSTING_DATA       # Snowflake database name
+    schema: ANALYTICS                    # Snowflake schema
+    tables:
+      - name: JOB_POSTING           # Snowflake table name

@@ -1,0 +1,22 @@
+# dbt_project.yml
+name: 'Job_Postings'
+version: '1.0.0'
+
+# The profile name must match the entry in profiles.yml
+profile: 'Job_Postings'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  Job_Postings:
+    +schema: ANALYTICS
+    +materialized: view

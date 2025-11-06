@@ -1,0 +1,4 @@
+# Ignore all logs and temp files
+/airflow/logs/
+*.log
+.env

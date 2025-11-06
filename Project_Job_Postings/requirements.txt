@@ -1,0 +1,5 @@
+pandas
+faker
+snowflake-connector-python
+python-dotenv
+apache-airflow

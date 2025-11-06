@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "job-data-pipeline"
+version = "0.1.0"
+description = "Job data pipeline using Airflow, Snowflake, dbt, Power BI"
+authors = ["Sarika Tandale <sarikatandale@gmail.com>"]
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.0"
+faker = "^24.0.0"
+snowflake-connector-python = "^3.5.0"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+pytest-mock = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
