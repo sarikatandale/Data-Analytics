@@ -25,7 +25,7 @@ logger = logging.getLogger("job_data_pipeline")
 default_args = {
     "owner": "data_eng",
     "start_date": datetime(2025, 1, 1),
-    "retries": 1,
+    "retries": 0,
 }
 
 # ---------------------------------------------------------------------

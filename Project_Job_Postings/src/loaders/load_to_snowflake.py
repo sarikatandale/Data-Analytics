@@ -11,10 +11,10 @@ This script includes functions to:
 import os
 import pandas as pd
 import snowflake.connector
+from snowflake.connector.pandas_tools import write_pandas
 from dotenv import load_dotenv
 import logging
 from typing import Optional
-
 # -------------------------------------------------------------------
 # Load environment variables from .env
 # -------------------------------------------------------------------
@@ -109,6 +109,8 @@ def insert_dataframe(
 
         """Insert a DataFrame with Job records into a Snowflake table"""
 
+        df.columns = [col.upper() for col in df.columns]
+        print(df.columns)
         success, nchunks, nrows, _ = write_pandas(conn, df, table_name.split('.')[-1])
         logger.info(f"Inserting {len(df)} rows into table Job_Posting...")
         
